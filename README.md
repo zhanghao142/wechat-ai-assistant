@@ -1,8 +1,8 @@
-# wechat-ai-assistant（小微）
+# wechat-ai-assistant
 
 可执行任务的微信 / 桌面 AI 智能体：不只是闲聊，而是 **规划 → 调工具 → 交付结果**。
 
-微信 Bot（iLink）与桌面端「小微」共用同一套 Spring Boot 后端；对话由 **LangGraph ReAct** 编排，支持本地工具、多 Agent、MCP、多模态与文档 RAG。
+微信 Bot（iLink）与桌面端共用同一套 Spring Boot 后端；对话由 **LangGraph ReAct** 编排，支持本地工具、多 Agent、MCP、多模态与文档 RAG。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.org/)
