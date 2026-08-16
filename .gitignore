@@ -1,0 +1,63 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Screenshots ###
+screenshots/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# Local runtime / user data (do not publish)
+AItext/
+upload/
+wechat-login/
+logs/
+TTS/
+*.log
+voice-preferences.json
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+desktop/.env
+desktop/.env.*
+!desktop/.env.example
+
+# Desktop build artifacts / caches
+desktop/node_modules/
+desktop/dist/
+desktop/.vite/
+desktop/src-tauri/target/
+
+# Compiled leftovers
+*.class
+/com/

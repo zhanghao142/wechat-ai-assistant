@@ -1,0 +1,102 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+body {
+  font-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  color: #0d0d0d;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+.confirm-root {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+}
+
+.confirm-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.18);
+  padding: 14px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.confirm-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6e6e80;
+  margin-bottom: 6px;
+}
+
+.confirm-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #0d0d0d;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 140px;
+  overflow: auto;
+  margin-bottom: 12px;
+  flex: 1;
+  user-select: text;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.confirm-btn {
+  min-width: 72px;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.confirm-btn:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.confirm-btn.cancel {
+  background: #fff;
+  color: #0d0d0d;
+}
+
+.confirm-btn.cancel:hover:not(:disabled) {
+  background: #ececf1;
+}
+
+.confirm-btn.ok {
+  background: #0d0d0d;
+  border-color: #0d0d0d;
+  color: #fff;
+}
+
+.confirm-btn.ok:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.confirm-empty {
+  margin: auto;
+  font-size: 13px;
+  color: #8e8ea0;
+}

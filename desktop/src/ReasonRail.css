@@ -1,0 +1,224 @@
+.reason-rail-shell {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  height: 100%;
+  min-width: 0;
+  z-index: 30;
+  background: var(--bg-sidebar);
+  border-left: 1px solid var(--border);
+}
+
+.reason-rail-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 40px;
+  flex-shrink: 0;
+  padding: 12px 4px;
+  border: none;
+  border-right: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 11px;
+  font-family: inherit;
+  line-height: 1.2;
+}
+
+.reason-rail-shell.is-open .reason-rail-toggle {
+  border-right-color: var(--border);
+}
+
+.reason-rail-toggle:hover {
+  background: var(--bg-hover);
+  color: var(--text);
+}
+
+.reason-rail-toggle.is-active {
+  color: var(--text);
+}
+
+.reason-rail-toggle-icon {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.reason-rail-toggle-label {
+  writing-mode: vertical-rl;
+  letter-spacing: 0.14em;
+  font-weight: 550;
+}
+
+.reason-rail-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: reason-pulse 1.4s ease-out infinite;
+}
+
+.reason-rail-badge {
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+}
+
+@keyframes reason-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.45); }
+  70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.reason-rail {
+  width: min(340px, 36vw);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width 0.25s linear, opacity 0.2s ease;
+  opacity: 1;
+}
+
+.reason-rail.collapsed {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.reason-rail-header {
+  flex-shrink: 0;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.reason-rail-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.reason-rail-sub {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.reason-rail-workload {
+  margin: 8px 0 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}
+
+.reason-rail-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 14px 16px 20px;
+}
+
+.reason-rail-empty {
+  margin-top: 12px;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  border: none;
+  background: transparent;
+}
+
+/* 散文叙述：无卡片、无标签 */
+.reason-essay {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reason-essay-p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.72;
+  color: var(--text);
+  word-break: break-word;
+  animation: reason-fade-in 0.32s ease;
+}
+
+.reason-essay-p.is-running {
+  color: var(--text);
+}
+
+.reason-essay-caret {
+  color: var(--text-secondary);
+}
+
+.reason-essay-blink {
+  display: inline-block;
+  width: 2px;
+  height: 0.95em;
+  margin-left: 2px;
+  vertical-align: -0.1em;
+  background: var(--accent, #3b82f6);
+  animation: reason-blink 1s step-end infinite;
+}
+
+@keyframes reason-blink {
+  50% { opacity: 0; }
+}
+
+.reason-essay-p.is-error {
+  color: #b91c1c;
+}
+
+.reason-essay-live {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+@keyframes reason-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reason-spin {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 4px;
+  border: 1.5px solid rgba(37, 99, 235, 0.25);
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: reason-spin 0.7s linear infinite;
+}
+
+@keyframes reason-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+  .reason-rail {
+    width: min(280px, 42vw);
+  }
+}
