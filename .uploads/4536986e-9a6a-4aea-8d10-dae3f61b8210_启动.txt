@@ -1,0 +1,3 @@
+cd /d "D:\ilink sdk"
+
+node ilink-test.mjs
